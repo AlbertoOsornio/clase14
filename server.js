@@ -4,9 +4,9 @@ const port = 3000
 let response = ""
 
 app.get('/',handlerGET)
-app.post('/',handlerGET)
-//app.update('/',handlerGET)
-//app.delete('/',handlerGET)
+app.post('/',handlerPOST)
+app.head('/',handlerHEAD)
+app.delete('/',handlerPOST)
 
 
 
@@ -25,7 +25,7 @@ function handlerPOST(req,res){
 }
 
 
-function handlerUPDATE(req,res){
+function handlerHEAD(req,res){
     response.send('Contestando una peticion por metodo UPDATE')
 }
 
